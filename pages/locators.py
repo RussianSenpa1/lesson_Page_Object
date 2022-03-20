@@ -15,3 +15,10 @@ class ProductPageLocators():
 
     NAMEBOOK_SELECTOR_MASSENG = (By.XPATH, "//div[@class='alert alert-safe alert-noicon alert-success  fade in']//strong")
     PRICEBOOK_SELECTOR_MASSENG = (By.XPATH, "//div[@class='alert alert-safe alert-noicon alert-info  fade in']//strong")
+
+    SUCCESS_MESSAGE = (By.XPATH, "//div[@class='alert alert-safe alert-noicon alert-success  fade in']")
+
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link")
