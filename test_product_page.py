@@ -29,6 +29,7 @@ def test_guest_can_add_product_to_basket(browser, link):
 
 
 @pytest.mark.skip
+@pytest.mark.negative_tests
 def test_guest_cant_see_success_message_after_adding_product_to_basket(
         browser):  # Проверка - Нет ли сообщения если добавить товар в корзину (должно быть)
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
@@ -46,6 +47,7 @@ def test_guest_cant_see_success_message(browser):  # Есть ли сообще�
 
 
 @pytest.mark.skip
+@pytest.mark.negative_tests
 def test_message_disappeared_after_adding_product_to_basket(
         browser):  # Пропадает ли сообщение о добавления товара в корзину
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
