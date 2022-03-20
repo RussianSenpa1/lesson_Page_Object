@@ -11,16 +11,16 @@ class BasePage():
     def __init__(self, browser, url, timeout=10):
         self.browser = browser
         self.url = url
-        self.browser.implicitly_wait(timeout)        #Закоментить для проврки Задание: отрицательные проверки
+        self.browser.implicitly_wait(timeout)  # Закоментить для проверки "Задание: отрицательные проверки"
 
-    def is_element_present(self, how, what):        #Метод проверки элемента на странице
+    def is_element_present(self, how, what):  # Метод проверки элемента на странице
         try:
             self.browser.find_element(how, what)
         except (NoSuchElementException):
             return False
         return True
 
-    def open(self):                    #Метод открытия страницы
+    def open(self):  # Метод открытия страницы
         self.browser.get(self.url)
 
     def solve_quiz_and_get_code(self):
@@ -46,7 +46,8 @@ class BasePage():
 
     def is_disappeared(self, how, what, timeout=4):
         try:
-            WebDriverWait(self.browser, timeout, 1, TimeoutException).until_not(EC.presence_of_element_located((how, what)))
+            WebDriverWait(self.browser, timeout, 1, TimeoutException).until_not(
+                EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return False
 
