@@ -22,3 +22,9 @@ class ProductPageLocators():
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link")
+
+    BASKET_LINK = (By.XPATH, "//a[@class='btn btn-default']")
+
+    BOOK_SELECTOR = (By.CLASS_NAME, "basket-items")
+
+    TEXT_SELECTOR = (By.XPATH, '//*[@id="content_inner"]/p')
